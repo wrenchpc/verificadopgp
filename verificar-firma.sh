@@ -1,7 +1,11 @@
 #!/bin/bash
 
 #Verificador de firmas PGP hecho por Wrench
-#Dependencias: gpg, zbar.
+#Dependencias obligatorias a instalar: gnupg, zbar.
+#Ejecuta gpg --search-keys WrenchPC para buscar la clave pública y añadirla
+#Posteriormente podrás verificar el certificado ejecutando el script
+#./verificar-firma certificado.png
+#Escaneará el QR incrustado en la imagen.
 
 if [[ -z "$1" ]]; then
     echo "Uso: $0 <imagen-con-qr.png> [archivo-original]"
